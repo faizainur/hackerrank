@@ -1,12 +1,12 @@
 package main
 
 import (
-    "bufio"
-    "fmt"
-    "io"
-    "os"
-    "strconv"
-    "strings"
+	"bufio"
+	"fmt"
+	"io"
+	"os"
+	"strconv"
+	"strings"
 )
 
 /*
@@ -24,20 +24,20 @@ func lonelyinteger(a []int32) int32 {
     if len(a) > 1 {
 
 	    for i := 0; i < len(a); i++ {
-		buffArr := make([]int32, len(a)) 
-		copy(buffArr, a)
-		removedItemArr := removeItem(buffArr, int32(i))
-		for j := 0; j < len(removedItemArr); j++ {
-			if removedItemArr[j] == a[i] {
-				break;
-			} else if removedItemArr[j] != a[i] && j == len(removedItemArr) - 1 {
-				lonelyInt = a[i]
-			}
-		}
+            buffArr := make([]int32, len(a)) 
+            copy(buffArr, a)
+            removedItemArr := removeItem(buffArr, int32(i))
+            for j := 0; j < len(removedItemArr); j++ {
+                if removedItemArr[j] == a[i] {
+                    break;
+                } else if removedItemArr[j] != a[i] && j == len(removedItemArr) - 1 {
+                    lonelyInt = a[i]
+                }
+            }
 
-		if lonelyInt != 0 {
-			break;
-		}
+            if lonelyInt != 0 {
+                break;
+            }
 	    }
     } else {
 	    lonelyInt = a[0]
